@@ -1,0 +1,31 @@
+<VideoPreviewWidget>:
+    Image:
+        id: img_left
+        source: "img/bad_camera.png"
+        allow_stretch: True
+        size_hint: None, None
+        size: 640, 480
+        animation_offset: .1
+    BoxLayout:
+        orientation: 'vertical'
+        size_hint_x: None
+        width: 160
+        spacing: 40
+        padding: 20, 0, 20, 0
+        Widget:
+        Button:
+            text: 'START'
+            on_release: root.on_btn_start()
+            size_hint_y: None
+            height: 50
+        Button:
+            text: 'STOP'
+            on_release: root.on_btn_stop()
+            size_hint_y: None
+            height: 50
+        Button:
+            text: 'EXIT'
+            on_release: app.stop()
+            size_hint_y: None
+            height: 50
+        Widget:
